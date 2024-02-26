@@ -46,7 +46,15 @@ export default function Home() {
     } else if (format === "pdf") {
       const data = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
       const pdf = new jsPDF();
-      pdf.addImage(data, "PNG", 0, 0);
+      pdf.addImage(
+        data,
+        "PNG",
+        0,
+        0,
+        pdf.internal.pageSize.getWidth(),
+        pdf.internal.pageSize.getHeight()
+      );
+
       pdf.save("signature.pdf");
     }
   };
