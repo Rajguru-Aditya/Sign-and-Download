@@ -60,23 +60,23 @@ export default function Home() {
             <>
               <ModalBody>
                 <div className="flex flex-col gap-5">
-                  <h1 className="content-center w-full text-center mb-5 text-[30px]">
+                  <h1 className="content-center w-full text-center mb-5 text-[20px] text-black mt-10">
                     Download Options
                   </h1>
                   <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+                    className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center w-full"
                     onClick={() => save("png")}
                   >
                     Download as PNG
                   </button>
                   <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+                    className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center w-full"
                     onClick={() => save("jpeg")}
                   >
                     Download as JPEG
                   </button>
                   <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+                    className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center w-full"
                     onClick={() => save("pdf")}
                   >
                     Download as PDF
@@ -93,7 +93,7 @@ export default function Home() {
 
   return (
     <NextUIProvider>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-r from-slate-800 to-zinc-900">
         <div className="flex content-center flex-col">
           <OptionsModal />
           <h1 className="content-center w-full text-center mb-5 text-[30px]">
@@ -119,14 +119,16 @@ export default function Home() {
             />
 
             <div className="flex flex-row justify-center items-center mt-5 gap-5 w-full">
+              {/* clear button with glass effect */}
               <button
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full"
+                className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center w-full"
                 onClick={clear}
               >
                 Clear
               </button>
+              {/* save button with glass effect */}
               <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+                className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center w-full"
                 onClick={onOpen}
               >
                 Save
