@@ -24,7 +24,7 @@ export default function Home() {
     sigCanvas.current.clear();
   };
 
-  const save = (format) => {
+  const save = (format: string) => {
     // const data = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
     // const link = document.createElement("a");
     // link.href = data;
